@@ -3,16 +3,44 @@ using System;
 public class Journal
 
 {
-    public List<Entry> _adding_an_entry = new List<Entry>();
-    public List<Entry> _displaying_entries = new List<Entry>();
-    public List<Entry> _saving_to_file = new List<Entry>();
-    public List<Entry> _Loading_file = new List<Entry>();
 
-    public void Dispaly()
+    public void Run()
     {
-        Console.WriteLine($"Type 1 to entry:");
-        Console.WriteLine($"Type 2 to Display entry:");
-        Console.WriteLine($"Type 3 to save the file:");
-        Console.WriteLine($"Type 4 to load a file:");
+        Console.WriteLine("you choose: " + GetChoice());
     }
+   
+
+    private string GetChoice()
+    {
+        bool isChoiceValid = false;
+        string choice = "";
+        do
+        {
+            Console.WriteLine("\nPlease select one of the following choises");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
+
+            choice = Console.ReadLine().Trim();
+
+            if (choice == "1" || choice == "2" || choice == "3" || choice == "4" )
+            {
+                isChoiceValid = true;
+            }
+            else
+            {
+                Console.WriteLine($"\"{choice}\"is not a valid option. Please choose 1 - 4.");
+            }
+
+            }while(!isChoiceValid);
+
+            return choice;
+
+
+
+    }
+   
+   
 }
