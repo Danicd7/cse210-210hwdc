@@ -29,7 +29,7 @@ public class Fraction
         string text = $"{_top}/{_bottom}";
         return text;
     }
-    public double GetDecimalstring()
+    public double GetDecimalvalue()
     {
         return (double)_top / (double)_bottom;
     }
