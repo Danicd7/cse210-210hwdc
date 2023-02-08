@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Journal myJournal = new Journal();
+        JournalEntry myJournal = new JournalEntry();
         myJournal.Run();
     }
 }

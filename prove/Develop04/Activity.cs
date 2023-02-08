@@ -40,7 +40,7 @@ public class Activity
     public void PauseSpining()
     {
         _activityDuration++;
-        switch (_activityDuration 4 %)
+        switch (_activityDuration % 4)
         {
             case 0:
                 Console.Write("/");

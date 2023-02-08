@@ -1,6 +1,6 @@
 using System;
 
-public class Journal
+public class JournalEntry
 
 {
 
@@ -10,7 +10,7 @@ public class Journal
     }
    
 
-    private string GetChoice()
+    public string GetChoice()
     {
         bool isChoiceValid = false;
         string choice = "";
