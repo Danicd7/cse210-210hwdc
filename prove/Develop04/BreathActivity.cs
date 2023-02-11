@@ -9,8 +9,8 @@ public class BreathActivity : Activity
         _breathingIn = breathingIn;
         _breathingOut = breathingOut;
     }*/
-    public BreathActivity(string breathingIn, string breathingOut)
-        : base(ActivityName, startDescription, endingDescription, activityDuration)// activityDuration, endingDescription)
+    public BreathActivity(string breathingIn, string breathingOut, string ActivityName, string startDescription, int activityDuration, string endingDescription)
+        : base(ActivityName, startDescription, activityDuration, endingDescription)// activityDuration, endingDescription
     {
         _breathingIn = breathingIn;
         _breathingOut = breathingOut;

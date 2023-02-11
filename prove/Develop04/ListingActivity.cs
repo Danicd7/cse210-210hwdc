@@ -10,7 +10,5 @@ public class ListingActivity : Activity
         _breathingOut = breathingOut;
     }
 
-    {
-        public string Get
-    }
+  
 }
