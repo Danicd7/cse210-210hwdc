@@ -1,16 +1,14 @@
-class comment 
+using System;
+class Comments 
 {
-    private string nameCommenter, videoComment;
+    private string _commenterAuthor = ""; 
+    private string _comment = "";
 
-    public comment (string _nameCommenter, string  _videoComment)
+    //display the comments 
+    public void DisplayComment()
     {
-        nameCommenter = _nameCommenter;
-        videoComment = _videoComment;
-    }
-
-    public string DisplayComment()
-    {
-
+        Console.WriteLine($"Commenter: {_commenterAuthor}");
+        Console.WriteLine($"Comment: {_comment}");
     }
 
 }
