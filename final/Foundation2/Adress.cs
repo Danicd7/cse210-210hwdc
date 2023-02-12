@@ -1,21 +1,27 @@
+ using System;
  class Adress
 {
-    private string street, city, stateProvince, country;
-    public Adress (string _street, string _city, string _stateProvince, string _country)
-    {
-        street = _street;
-        city = _city;
-        stateProvince = _stateProvince;
-        country = _country;
+    private string _street; 
+    private string _city;
+    private string _stateProvince;
+    private string _country;
+    private bool _US = true;
 
+    public void DisplayAdress()
+    {
+        Console.WriteLine($"{_street}, {_city}, {_stateProvince}. {_country}")
     }
 
-    public bool InUs()
+        public void UsAdress()
     {
-
+        Convert.ToBoolean(_country);
+        if (_US == true)
+        {
+            Console.WriteLine("US Adress, Shipping $5");
+        }
+        else
+        {
+            Console.WriteLine("Not US Adress, Shipping $35");
+        }
     } 
-    public string DisplayAdress()
-    {
-        
-    }
 }
