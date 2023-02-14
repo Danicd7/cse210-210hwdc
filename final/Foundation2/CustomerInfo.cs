@@ -1,11 +1,28 @@
-class CustomerInfo
+public class Customer
 {
-    private string customerName;
+    private string _customerName = "";
 
-    public CustomerInfo (string _customername)
+    private Address _address;
+    	
+    public Customer(string customerName)//, Address address)
     {
-        customerName = _customername;
+        _customerName = customerName;
+        //_address = address;
     }
 
+    public void SetCustomerAddress(Address address)
+    {
+        _address = address;
+    }
+
+    public string GetCustomerName()
+    {
+        return _customerName;
+    }
+        
+    public string GetCustomerAddress()
+    {
+        return _address.DisplayAdress();
+    }
    
 }

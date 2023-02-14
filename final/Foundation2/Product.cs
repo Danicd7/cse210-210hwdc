@@ -1,24 +1,16 @@
 class Product 
 {
-    private int quantity, productId;
-    private double price;
-    private string name;
+    private int _quantity = 0;
+    private double _price = 0.0;
+    private int _productId = 0;
+    private string _name = "";
 
-    public Product (int _quantity, int _productId, double _price, string _name)
-
+    public double CalculatePrice()
     {
-        quantity = _quantity;
-        productId = _productId;
-        price = _price;
-        name = _name;
+        return _quantity * _price;
     }
-
-    private double CalculatePrice()
+    public void DisplayProduct()
     {
-
-    }
-    public string DisplayProduct()
-    {
-        
+        Console.WriteLine($"{_productId}-{_name}");
     }
 }
