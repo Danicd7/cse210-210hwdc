@@ -21,24 +21,52 @@ class Program
         v1._author = "Karen Puzzles";
         v1._length = 1792;
 
+
+        v1.comments.Add(comments1v1);
+        v1.comments.Add(comments2v1);
+        v1.comments.Add(comments3v1);
+
         v1.DisplayInfo();
-        comments1v1.DisplayComment();
         
         Comments commentsv2 = new Comments();
-        commentsv2._commenterAuthor = "Maria";
+        commentsv2._commenterAuthor = "Antonia";
         commentsv2._comment = "Amazing";
         video v2 = new video();
         v2._title = "One two three";
         v2._author = "Plain White Tees";
         v2._length = 180;
 
+        v2.comments.Add(commentsv2);
+
+
+        v2.DisplayInfo();
+
         Comments commentsv3 = new Comments();
-        commentsv2._commenterAuthor = "Maria";
-        commentsv2._comment = "Amazing";
+        commentsv3._commenterAuthor = "Maria";
+        commentsv3._comment = "Amazing";
         video v3 = new video();
         v3._title = "The Biggest MYTH About Your Things";
         v3._author = "The Minimal Mom";
         v3._length = 884;
+
+        v3.comments.Add(commentsv3);
+        v3.DisplayInfo();
+
+        List<video> VideoList = new List<video>();
+        VideoList.Add(v1);
+        VideoList.Add(v2);
+        VideoList.Add(v3);
+
+        foreach (video video in VideoList)
+        {
+            Console.WriteLine(video.DisplayInfo());
+            foreach (Comments comment in video.comments)
+            { 
+                Console.WriteLine(comment.DisplayComment());
+            }
+        }
+
+
     }
 
 

@@ -4,6 +4,8 @@ class video
     public string _title = ""; 
     public string _author = "";
     public int _length = 0; 
+    public int _NumOfComments = 0;
+
     public List<Comments> comments = new List<Comments>();
 
     public void Comments()
@@ -13,15 +15,18 @@ class video
         comments.Add(entries);
     }
 
-    public void NumOfComments()
+    public int NumOfComments()
     {
         foreach (Comments item in comments)
         {
-            Console.WriteLine(comments.Count);
+           _NumOfComments = comments.Count();
         }
+       return _NumOfComments; 
     }
-    public void DisplayInfo()
+    public string DisplayInfo()
     {
-        Console.WriteLine($"Title: {_title}, Author: {_author}, Lenght in seconds: {_length}");
+        return String.Format("Title: {0}, Author: {1}, Lenght in seconds: {2}, Number of commets: {3}", _title, _author, _length, NumOfComments());
     }
+
+    
 }
