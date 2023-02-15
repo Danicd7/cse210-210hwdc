@@ -1,8 +1,8 @@
 using System;
 class Comments 
 {
-    private string _commenterAuthor = ""; 
-    private string _comment = "";
+    public string _commenterAuthor = ""; 
+    public string _comment = "";
 
     //display the comments 
     public void DisplayComment()
@@ -10,5 +10,6 @@ class Comments
         Console.WriteLine($"Commenter: {_commenterAuthor}");
         Console.WriteLine($"Comment: {_comment}");
     }
+
 
 }
