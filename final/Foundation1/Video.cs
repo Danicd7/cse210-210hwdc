@@ -1,9 +1,9 @@
 using System;
 class video
 {
-    private string _title = ""; 
-    private string _author = "";
-    private double _length = 0; 
+    public string _title = ""; 
+    public string _author = "";
+    public int _length = 0; 
     public List<Comments> comments = new List<Comments>();
 
     public void Comments()
