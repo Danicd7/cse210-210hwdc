@@ -1,7 +1,7 @@
 public class BreathActivity : Activity
 {
-    private string _breathingIn;
-    private string _breathingOut;
+    private string _breathingIn = "";
+    private string _breathingOut = "";
 
     /*public BreathActivity(string ActivityName, string startDescription, int activityDuration, string endingDescription, string breathingIn, string breathingOut)
         : base(ActivityName, startDescription, activityDuration, endingDescription)
@@ -9,21 +9,22 @@ public class BreathActivity : Activity
         _breathingIn = breathingIn;
         _breathingOut = breathingOut;
     }*/
-    public BreathActivity(string breathingIn, string breathingOut, string ActivityName, string startDescription, int activityDuration, string endingDescription)
-        : base(ActivityName, startDescription, activityDuration, endingDescription)// activityDuration, endingDescription
+    public void RunBreathActivity(string breathingIn, string breathingOut) : base (activityName, startDescription)// activityDuration, endingDescription
     {
-        _breathingIn = breathingIn;
-        _breathingOut = breathingOut;
+        Console.WriteLine("Breathing Activity");
+        Activity.startDescription("Breathing", "This activity will help you relax by walking through breathing in and out");
+       
     }
 
-    public void runActivity()
+     
+    public void BreathingExercise(): base(activityDuration)
     {
-        Console.WriteLine(string.Format("Welcome to the ", GetActivityName()));
-        Console.WriteLine(string.Format("This activity will help you relax by walking your through breathing in",
-        "and out slowly. Clear your mind and focus on your breathing.", DisplayStartMessage()));
-        Console.WriteLine();
-
         
+        Console.WriteLine("Breathe In");
+
+        Activity.CountDown(int activityDuration);
+        Console.WriteLine("Breathe Out");
+
     }
    
 }

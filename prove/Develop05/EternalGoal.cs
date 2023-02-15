@@ -1,18 +1,18 @@
-class EternalGoal
+class EternalGoal : Goal
 {
-    private int goalCouant;
-    public EternalGoal (int _goalCount)
-    {
-        goalCouant = _goalCount;
-    }
+    private int _goalCouant = 0;
+    //ublic EternalGoal (int _goalCount)
+    //{
+        //goalCouant = _goalCount;
+    //}
 
     public void EternalGoal()
     {
 
     }
-    public int GoalCountTotal()
+    public void GoalCountTotal()
     {
-
+        AddPoints();
     }
     
 }
