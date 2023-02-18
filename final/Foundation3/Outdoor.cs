@@ -1,13 +1,14 @@
-class Outdoor 
+public class Outdoor : Event 
 {
-    private string weatherForecast;
+    private int _weatherForecast;
 
-    public Outdoor (string _weatherForecast)
+    public Outdoor (string eventTitle, string description, string eventDate, string eventTime, string eventAdress, string eventType, string especificInfo, int weatherForecast) 
+    : base (eventTitle, description,  eventDate,  eventTime, eventAdress, eventType, especificInfo)
     {
-        weatherForecast = _weatherForecast;
+        _weatherForecast = weatherForecast;
     }
-    public void Forecaster()
+    public string Forecaster()
     {
-        
+        return string.Format("The wether will be Sunny: ", _weatherForecast);
     }
 }

@@ -1,9 +1,15 @@
 public class Customer
 {
     private string _customerName = "";
+    private bool _customerLivesUs;
 
-    private Address _address;
+    private Address _address = new Address();
     	
+    public bool CXlisInUSA()
+    {
+        _customerLivesUs = _address.UsAdress();
+        return _customerLivesUs;
+    }    
     public Customer(string customerName)//, Address address)
     {
         _customerName = customerName;

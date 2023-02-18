@@ -1,19 +1,21 @@
-class Lecture
+using System;
+public class Lecture : Event
 {
-    private string speaker;
-    private int limitedCapacity;
+    private string _speaker;
+    private int _limitedCapacity = 0;
 
-    public Lecture (string _speaker, int _limitedCapacity)
+    public Lecture (string eventTitle, string description, string eventDate, string eventTime, string eventAdress, string eventType, string especificInfo, string speaker, int limitedCapacity) 
+    : base (eventTitle, description,  eventDate,  eventTime, eventAdress, eventType, especificInfo)
     {
-        speaker = _speaker;
-        limitedCapacity = _limitedCapacity;
+        _speaker = speaker;
+        _limitedCapacity = limitedCapacity;
     }
-    public void GetSpeaker()
+    public string GetSpeaker()
     {
-
+        return String.Format("The invited speaker will be {0}", _speaker);
     }
-    public void FullCapacity()
+    public string FullCapacity()
     {
-        
+        return String.Format("The capacity for this place is of {0} people", _limitedCapacity);
     }
 }

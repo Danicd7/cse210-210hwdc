@@ -1,13 +1,21 @@
 using System;
-class Order
+public class Order
 {
-    public Customer _customer;
-    public List<Product> _products;
-    public int _shipping = 0;
-    public string _shipingLabel = "";
-    public string _packingLabel = "";
+    private Customer _customer;
+    private List<Product> _products = new List<Product>();
+    private int _shipping = 0;
+    private string _shipingLabel = "";
+    private string _packingLabel = "";
 
-    
+    public void ProductList(Product newProduct)
+    {
+        _products.Add(newProduct);
+    }
+
+    public void SetCustomer(Customer customer)
+    {
+        _customer = customer;
+    }
     public double TotalCost()
     {
         double _totalCost = 0;
@@ -20,6 +28,20 @@ class Order
 
         return _totalCost;
     }
+
+    public void GetShipinCost()
+    {
+        bool USshipping = _customer.CXlisInUSA();
+        if (USshipping == true)
+        {
+            _shipping = 5;
+        }
+        else 
+        {
+            _shipping = 35;
+        }
+    }
+
     public string GetShipingLabel()
     {
         return _shipingLabel;

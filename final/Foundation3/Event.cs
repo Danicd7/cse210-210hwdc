@@ -1,26 +1,28 @@
-class Event
+public class Event
 {
-    private string eventTitle, description, eventDate, eventTime, eventAdress;
+    private string _eventTitle, _description, _eventDate, _eventTime, _eventAdress, _eventType, _especificInfo;
 
-    public Event (string _eventTitle, string _description, string _eventDate, string _eventTime, string _eventAdress)
+    public Event (string eventTitle, string description, string eventDate, string eventTime, string eventAdress, string eventType, string especificInfo)
     {
-        eventTitle = _eventTitle;
-        description = _description;
-        eventDate = _eventDate;
-        eventTime = _eventTime;
-        eventAdress = _eventAdress;
+        _eventTitle = eventTitle;
+        _description = description;
+        _eventDate = eventDate;
+        _eventTime = eventTime;
+        _eventAdress = eventAdress;
+        _eventType = eventType;
+        _especificInfo = especificInfo;
     }
 
-    public void Standard()
+    public string Standard()
     {
-
+        return String.Format("Event Title: {0}, Description: {1}, Date: {2}, Time: {3}, Adress: {4}.", _eventTitle, _description, _eventDate, _eventTime, _eventAdress);
     }
-    public void FullDetails()
+    public string FullDetails()
     {
-
+        return String.Format("Type of Event: {0}, especific Information: {1}.", Standard(), _eventType, _especificInfo);
     }
-    public void ShortDescription()
+    public string ShortDescription()
     {
-
+        return String.Format("Short description: {0} {1} {2}", _eventType, _eventTitle, _eventDate);
     }
 } 
