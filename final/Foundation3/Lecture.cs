@@ -9,7 +9,10 @@ public class Lecture : Event
     {
         _speaker = speaker;
         _limitedCapacity = limitedCapacity;
+
     }
+
+
     public string GetSpeaker()
     {
         return String.Format("The invited speaker will be {0}", _speaker);
@@ -17,5 +20,33 @@ public class Lecture : Event
     public string FullCapacity()
     {
         return String.Format("The capacity for this place is of {0} people", _limitedCapacity);
+    }
+    //public void SetEspecificInfo(string especificInfo)
+    //{
+        //_especificInfo = especificInfo;
+    //}
+
+    //public string GetEspecificInfo()
+    //{
+        //return especificInfo;
+    //}
+
+    public string SpecificInfo()
+    {
+        _especificInfo = String.Format("Spreaker: {0}, Capacity: {1}",GetSpeaker(), FullCapacity());
+        return _especificInfo;
+    }
+
+    public string DisplayLectureEventS()
+    {
+       return String.Format(Standard());
+    }
+    public string DisplayLectureEventF()
+    {
+       return String.Format(FullDetails());
+    }
+    public string DisplayLectureEventSh()
+    {
+       return String.Format(ShortDescription());
     }
 }
